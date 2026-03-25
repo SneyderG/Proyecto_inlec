@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'carton';
+    src: url("../assets/carton.otf");
+}
+
+body{
+
+    font-family: 'carton' ;
+}
