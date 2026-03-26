@@ -1,0 +1,6 @@
+.bg-wave{
+    background-image: url("./wave.png");
+    background-size: 700px;
+    background-repeat: repeat-x;
+    background-position: bottom;
+}
