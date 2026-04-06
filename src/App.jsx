@@ -8,6 +8,7 @@ export const App = () => {
     <>
       <BrowserRouter>
         
+        <Header/>
         
         <Routes>
           <Route path="/" element={<Home />} />
