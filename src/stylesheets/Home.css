@@ -1,6 +1,6 @@
-.bg-wave{
-    background-color: #ffd5b0;
-    background-size: 500px;
-    background-repeat: repeat-x;
-    background-position: bottom;
+.bg-brown{
+    background-image: url(./fondov.webp);
+    background-repeat: no-repeat;
+    background-size: 100%;
+   
 }
