@@ -29,11 +29,11 @@ export const Home = () => {
                     </div>
                 </div>
             </div>
-            <section className="bg-brown">
+            <section className="mt-5 bg-brown">
                 <div className="container">
 
                     <div className="row">
-                        <div className="col">
+                        <div className="col-">
                             <div id="carouselExampleCaptions" class="carousel slide">
                                 <div class="carousel-indicators">
                                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -42,25 +42,25 @@ export const Home = () => {
                                 </div>
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="./Capitulo.png" class="d-block w-100" alt="..."/>
-                                            <div class="carousel-caption d-none d-md-block">
-                                                <h5>First slide label</h5>
-                                                <p>Some representative placeholder content for the first slide.</p>
-                                            </div>
+                                        <img src="./mr.jpg" className="d-block w-100 rounded-3 border border-3 rounded-3" alt="..." />
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h5>First slide label</h5>
+                                            <p>Some representative placeholder content for the first slide.</p>
+                                        </div>
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="..." class="d-block w-100" alt="..."/>
-                                            <div class="carousel-caption d-none d-md-block">
-                                                <h5>Second slide label</h5>
-                                                <p>Some representative placeholder content for the second slide.</p>
-                                            </div>
+                                        <img src="..." class="d-block w-100" alt="..." />
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h5>Second slide label</h5>
+                                            <p>Some representative placeholder content for the second slide.</p>
+                                        </div>
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="..." class="d-block w-100" alt="..."/>
-                                            <div class="carousel-caption d-none d-md-block">
-                                                <h5>Third slide label</h5>
-                                                <p>Some representative placeholder content for the third slide.</p>
-                                            </div>
+                                        <img src="..." class="d-block w-100" alt="..." />
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h5>Third slide label</h5>
+                                            <p>Some representative placeholder content for the third slide.</p>
+                                        </div>
                                     </div>
                                 </div>
                                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
@@ -71,6 +71,30 @@ export const Home = () => {
                                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                     <span class="visually-hidden">Next</span>
                                 </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div className="container2">
+                    <div className="row">
+                        <div className="col-3">
+                            <div class="card" >
+                                <img src="./mr.jpg" class="card-img-top" alt="..." />
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">An item</li>
+                                        <li class="list-group-item">A second item</li>
+                                        <li class="list-group-item">A third item</li>
+                                    </ul>
+                                    <div class="card-body">
+                                        <a href="#" class="card-link">Card link</a>
+                                        <a href="#" class="card-link">Another link</a>
+                                    </div>
                             </div>
                         </div>
                     </div>
