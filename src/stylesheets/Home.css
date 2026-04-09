@@ -1,15 +1,32 @@
-.bg-brown{
-    background-image: url(./fondov.webp);
+.bg-brown {
+    background-color: #a3a03e;
     background-repeat: no-repeat;
+    width: 100%;
     background-size: 100%;
-   
+
+
+
 }
 
-.cardi{
-    background-color: #552709;
+.bg-top {
+    background-image: url(./verdesvg.svg);
+    background-size: 100%;
+    background-position: 0px 107%;
+    background-repeat: no-repeat;
+}
+
+.cardi {
+    background-color: #fde48a;
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(175, 93, 38, 0.966);
     padding: 20px;
     margin: 20px;
     text-align: center;
+}
+
+.bg-let {
+    background-image: url(./cachib.svg);
+    background-size: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
 }
