@@ -3,6 +3,8 @@
     background-repeat: no-repeat;
     width: 100%;
     background-size: 100%;
+    padding-top: 1vw;
+   
 
 
 
@@ -18,19 +20,28 @@
 .cardi {
     background-color: #fde48a;
     border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(175, 93, 38, 0.966);
+    box-shadow: 0 10px 20px hwb(24 15% 31% / 0.966);
     padding: 20px;
     margin: 20px;
     text-align: center;
 }
 
 .bg-let {
+ 
+    background-image: url(./cachib.svg);
+    background-size: 100%;
+    background-position: 0 -12vw;
+    background-repeat: no-repeat;
+    background-color: rgb(204, 109, 31);
+}
+
+
+
+.dividerl-let{
     background-image: url(./cachib.svg);
     background-size: 100%;
     background-position: top;
     background-repeat: no-repeat;
-}
-
-.bg-cafe{
     background-color: rgb(204, 109, 31);
+    height: 150px;
 }
