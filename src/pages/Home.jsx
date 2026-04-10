@@ -80,18 +80,18 @@ export const Home = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section >
             <div className="bg-let">
-                <section className="mt-5">
+                <section className="bg-cafe mt-5">
                     <div className="container">
                         <div >
                             <div class="row row-cols-1 row-cols-md-3 g-4">
                                 <div class="col-4">
-                                    <div class="cardi h-100">
+                                    <div class="cardi h-90">
                                         <img src="./srrata.jpg" class="card-img-top" alt="..." />
                                         <div class="card-body">
                                             <h5 class="card-title">Card title</h5>
-                                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
                                         </div>
                                         <div class="card-footer">
                                             <small class="text-body-secondary">Last updated 3 mins ago</small>
@@ -99,11 +99,12 @@ export const Home = () => {
                                     </div>
                                 </div>
                                 <div class="col">
-                                    <div class="cardi h-100">
+                                    <div class="cardi h-90">
                                         <img src="./srtopo.jpg" class="card-img-top" alt="..." />
                                         <div class="card-body">
                                             <h5 class="card-title">Card title</h5>
-                                            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+                                                </p>
                                         </div>
                                         <div class="card-footer">
                                             <small class="text-body-secondary">Last updated 3 mins ago</small>
@@ -111,7 +112,7 @@ export const Home = () => {
                                     </div>
                                 </div>
                                 <div class="col">
-                                    <div class="cardi h-100">
+                                    <div class="cardi h-90">
                                         <img src="./srafox.jpg" class="card-img-top" alt="..." />
                                         <div class="card-body">
                                             <h5 class="card-title">Card title</h5>
@@ -128,6 +129,52 @@ export const Home = () => {
                     </div>
                 </section>
             </div>
+
+            <section className="mt-5">
+                <div className="container">
+                    <div >
+                        <div class="row row-cols-1 row-cols-md-3 g-4">
+                            <div class="col-4">
+                                <div class="cardi h-100">
+                                    <img src="./matero.png" class="card-img-top" alt="..." />
+                                    <div class="card-body">
+                                        <h5 class="card-title">Matheo Yepez</h5>
+                                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <small class="text-body-secondary">Last updated 3 mins ago</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="cardi h-100">
+                                    <img src="./sneyder.png" class="card-img-top" alt="..." />
+                                    <div class="card-body">
+                                        <h5 class="card-title">Sneyder G</h5>
+                                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <small class="text-body-secondary">Last updated 3 mins ago</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="cardi h-100">
+                                    <img src="./luis.png" class="card-img-top" alt="..." />
+                                    <div class="card-body">
+                                        <h5 class="card-title">Luis Miguel</h5>
+                                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <small class="text-body-secondary">Last updated 3 mins ago</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
         </>
     )
 }
