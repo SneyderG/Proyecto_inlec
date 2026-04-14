@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Header } from '../components/Header'
 import "../stylesheets/Home.css"
 
 export const Home = () => {
+
+    const [mostrarModal, setMostrarModal] = useState(false)
 
     return (
 
@@ -10,55 +12,135 @@ export const Home = () => {
 
             <Header />
 
+            {mostrarModal && (
+                <div
+                    onClick={() => setMostrarModal(false)}
+                    style={{
+                        position: "fixed",
+                        top: 0, left: 0, right: 0, bottom: 0,
+                        backgroundColor: "rgba(0,0,0,0.5)",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        zIndex: 9999
+                    }}
+                >
+                    <div
+                        onClick={(e) => e.stopPropagation()}
+                        style={{
+                            background: "#fff8f0",
+                            border: "3px solid #ffc107",
+                            borderRadius: "16px",
+                            padding: "2rem",
+                            maxWidth: "420px",
+                            width: "90%",
+                            textAlign: "center",
+                            boxShadow: "0 8px 32px rgba(0,0,0,0.18)"
+                        }}
+                    >
+                        <div style={{ fontSize: "2.5rem", marginBottom: "0.5rem" }}>🦊</div>
+
+                        <h4 className="tipo-grafia" style={{ color: "#c67c00", marginBottom: "0.75rem" }}>
+                            Bienvenido a INLEC
+                        </h4>
+
+                        <p className="tipo-grafo" style={{ color: "#555", marginBottom: "1rem", lineHeight: "1.7" }}>
+                            INLEC es un proyecto que transforma la lectura en una aventura interactiva.
+                            Descubre capítulos animados, conoce a los personajes y vive cada historia
+                            de una forma totalmente nueva a través de animaciones y cómics digitales.
+                        </p>
+
+                        <div style={{
+                            display: "flex",
+                            justifyContent: "center",
+                            gap: "1rem",
+                            flexWrap: "wrap",
+                            marginBottom: "1.25rem"
+                        }}>
+                            {["📖 Capítulos", "🎨 Animaciones", "🦝 Personajes", "🌐 Comunidad"].map((item) => (
+                                <span key={item} style={{
+                                    background: "#fff3cd",
+                                    border: "1.5px solid #ffc107",
+                                    borderRadius: "20px",
+                                    padding: "4px 14px",
+                                    fontSize: "13px",
+                                    color: "#856404",
+                                    fontWeight: "500"
+                                }}>
+                                    {item}
+                                </span>
+                            ))}
+                        </div>
+
+                        <button
+                            className="btn btn-warning"
+                            onClick={() => setMostrarModal(false)}
+                            style={{ borderRadius: "20px", padding: "6px 28px" }}
+                        >
+                            ¡Entendido!
+                        </button>
+                    </div>
+                </div>
+            )}
+
          
-            <div id="inicio">
+          <div id="inicio">
 
-                <div className="container mt-5">
+    <div className="container mt-5">
 
-                    <div className="row pb-5">
+        <div className="row pb-5">
 
-                        <div className="mt-3 pt-5">
+            <div className="col-12 mt-3 pt-5">
 
-                            <div>
+                <div>
 
-                                <h3 className="text-center">
-                                    QUE BUSCAMOS
-                                </h3>
+                    <h3 className="tipo-grafia text-center">
+                        QUE BUSCAMOS
+                    </h3>
 
-                                <p className="text-center">
-                                    En nuestro proyecto buscamos revolucionar la lectura donde se pueda <br /> convertir en una experiencia interactivas
-                                    por medio <br />de animaciones que harán que cada usuario pueda explorar INLEC.
-                                </p>
+                    <p className="tipo-grafo text-center">
+                        En nuestro proyecto buscamos revolucionar la lectura donde se pueda 
+                        convertir en una experiencia interactivas
+                        por medio de animaciones que harán que cada usuario pueda explorar INLEC.
+                    </p>
 
-                            </div>
+                </div>
 
 
-                            <div className="d-flex">
+                <div className="row align-items-center mt-4">
 
-                                <img height="500" src="./foxi.png" alt="Foxy" />
+                    {/* Imagen */}
+                    <div className="col-12 col-md-6 text-center">
 
-                                <div className="ms-5 pt-5">
+                        <img
+                            className="img-fluid"
+                            src="./foxi.png"
+                            alt="Foxy"
+                        />
 
-                                    <h3 className="text-center pt-5">
-                                        QUE ES INLEC
-                                    </h3>
+                    </div>
 
-                                    <p className="text-center mt-3">
-                                        Buscamos hacer más emocionante la lectura mediante animaciones, <br /> cómics,
-                                        página web y redes sociales.
-                                    </p>
 
-                                    <div className="text-center mt-5">
+                    {/* Texto */}
+                    <div className="col-12 col-md-6 mt-4 mt-md-0">
 
-                                        <button className="btn btn-warning">
-                                            Explorar
-                                        </button>
+                        <h3 className="tipo-grafia text-center pt-md-5">
+                            QUE ES INLEC
+                        </h3>
 
-                                    </div>
+                        <p className="tipo-grafo text-center mt-3">
+                            Buscamos hacer más emocionante la lectura mediante animaciones,
+                            cómics, página web y redes sociales.
+                        </p>
 
-                                </div>
+                        <div className="text-center mt-5">
 
-                            </div>
+                            <button
+                                className="tipo-grafo btn btn-warning"
+                                onClick={() => setMostrarModal(true)}
+                            >
+                                Mas información
+                            </button>
 
                         </div>
 
@@ -68,13 +150,19 @@ export const Home = () => {
 
             </div>
 
+        </div>
+
+    </div>
+
+</div>
+
 
           
             <section id="capitulos">
 
                 <div className="container">
 
-                    <h1 className="text-center">
+                    <h1 className="tipo-grafia text-center">
                         Capitulos
                     </h1>
 
@@ -88,7 +176,7 @@ export const Home = () => {
 
                                 <img
                                     src="./capitulo1.jpg"
-                                    className="mt-5 d-block w-100 rounded-3 border border-3"
+                                    className="mt-5 d-block w-100 rounded-5 border border-5"
                                     alt=""
                                 />
 
@@ -152,7 +240,7 @@ export const Home = () => {
 
                 <div className="container">
 
-                    <h1 className="text-center mt-5">
+                    <h1 className="tipo-grafia text-center mt-5">
                         Personajes
                     </h1>
 
@@ -175,10 +263,10 @@ export const Home = () => {
 
                                             <div className="card-body mt-3">
 
-                                                <h5 className="card-title">
+                                                <h5 className="tipo-grafia card-title">
                                                     Sra Rata
                                                 </h5>
-                                                <p className="mt-3">Malebola y sombria rata que cumple su rol secundario en la historia</p>
+                                                <p className="tipo-grafo mt-3">Malebola y sombria rata que cumple su rol secundario en la historia</p>
                                             </div>
 
                                         </div>
@@ -194,10 +282,10 @@ export const Home = () => {
 
                                             <div className="card-body">
 
-                                                <h5 className="card-title mt-3">
+                                                <h5 className="tipo-grafia card-title mt-3">
                                                     Sr Topo
                                                 </h5>
-                                                <p className="mt-3">Un topo curioso y amigable que vive en el bosque</p>
+                                                <p className="tipo-grafo mt-3">Un topo curioso y amigable que vive en el bosque</p>
 
                                             </div>
 
@@ -214,10 +302,10 @@ export const Home = () => {
 
                                             <div className="card-body">
 
-                                                <h5 className="card-title mt-3">
+                                                <h5 className="tipo-grafia card-title mt-3">
                                                     Sra Fox
                                                 </h5>
-                                                <p className="mt-3">Una zorra astuta y traviessa y madre de los zorros</p>
+                                                <p className="tipo-grafo mt-3">Una zorra astuta y traviessa y madre de los zorros</p>
 
                                             </div>
 
@@ -266,7 +354,7 @@ export const Home = () => {
 
                 <div className="container">
 
-                    <h1 className="text-center">
+                    <h1 className="tipo-grafia text-center">
                         Sobre nosotros
                     </h1>
 
@@ -281,10 +369,10 @@ export const Home = () => {
 
                                 <div className="card-body">
 
-                                    <h5 className="card-title">
+                                    <h5 className="tipo-grafia card-title">
                                         Matheo Yepez
                                     </h5>
-                                    <p className="mt-3">Desarrollador, Diseñador, Animador <br /> Manos del proyecto</p>
+                                    <p className="tipo-grafo mt-3">Desarrollador, Diseñador, Animador <br /> Manos del proyecto</p>
 
                                 </div>
 
@@ -301,10 +389,10 @@ export const Home = () => {
 
                                 <div className="card-body">
 
-                                    <h5 className="card-title">
+                                    <h5 className="tipo-grafia card-title">
                                         Sneyder Gaviria
                                     </h5>
-                                    <p className="mt-3">Ilustrador,Publicidad, Animador <br />Cuello del proyecto</p>
+                                    <p className="tipo-grafo mt-3">Ilustrador,Publicidad, Animador <br />Cuello del proyecto</p>
                                     
 
                                 </div>
@@ -322,10 +410,10 @@ export const Home = () => {
 
                                 <div className="card-body">
 
-                                    <h5 className="card-title">
+                                    <h5 className="tipo-grafiacard-title">
                                         Luis Miguel
                                     </h5>
-                                    <p className="mt-3">Contenido Digital,Animador,Ilustrador <br />Cabeza del proyecto</p>
+                                    <p className="tipo-grafo mt-3">Contenido Digital,Animador,Ilustrador <br />Cabeza del proyecto</p>
 
                                 </div>
 
@@ -345,7 +433,7 @@ export const Home = () => {
 
                 <div className="container">
                     <div>
-                        <h1 className='text-center mt-5'>Footer</h1>
+                        <h1 className='tipo-grafia text-center mt-5'>Footer</h1>
                     </div>
 
                     <div className="footer-inlec container-fluid rounded-5 border border-5">
@@ -355,11 +443,11 @@ export const Home = () => {
                             <div className="row">
 
 
-                                <div className="col-md-4 footer-col">
+                                <div className=" col-md-4 footer-col">
 
-                                    <h3>INLEC</h3>
+                                    <h3 className="tipo-grafia">INLEC</h3>
 
-                                    <p>
+                                    <p className="tipo-grafo mt-3">
                                         Transformamos la lectura en una experiencia interactiva mediante animaciones,
                                         cómics y contenido digital.
                                     </p>
@@ -369,7 +457,7 @@ export const Home = () => {
 
                                 <div className="col-md-4 footer-col">
 
-                                    <h5>Navegación</h5>
+                                    <h5 className="tipo-grafia">Navegación</h5>
 
                                     <ul className="footer-links">
 
@@ -396,7 +484,7 @@ export const Home = () => {
 
                                 <div className="col-md-4 footer-col">
 
-                                    <h5>Síguenos</h5>
+                                    <h5 className="tipo-grafia">Síguenos</h5>
 
                                     <div className="social-icons">
 

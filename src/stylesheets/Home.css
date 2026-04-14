@@ -1,3 +1,19 @@
+@font-face {
+    font-family:'comicin' ;
+    src: url(../assets/Comicbon\ -\ personal\ use.ttf);
+}
+
+@font-face {
+    font-family: 'carton';
+    src: url(../assets/Comico.otf);
+}
+
+.tipo-grafo{
+    font-family: 'carton';
+}
+
+
+
 .bg-brown {
     background-color: #a3a03e;
     background-repeat: no-repeat;
@@ -10,6 +26,9 @@
 
 }
 
+.tipo-grafia{
+    font-family: 'comicin';
+}
 .bg-top {
     background-image: url(./verdesvg.svg);
     background-size: 100%;
@@ -54,7 +73,7 @@
     background-color: #a3a03e;
 }
 
-/* FOOTER INLEC */
+
 
 .footer-inlec {
 
@@ -68,7 +87,7 @@
 
 }
 
-/* columnas */
+
 
 .footer-col h3 {
 
@@ -84,7 +103,6 @@
 
 }
 
-/* links */
 
 .footer-links {
 
@@ -108,7 +126,7 @@
 
 }
 
-/* redes sociales */
+
 
 .social-icons i {
 
@@ -126,7 +144,7 @@
 
 }
 
-/* línea inferior */
+
 
 .footer-bottom {
 

@@ -44,7 +44,7 @@ export const Header = () => {
                                     fontFamily: "carton"
                                 }}
                             >
-                                Inicio
+                                <h5 className="tipo-grafia">Inicio</h5>
                             </a>
                         </li>
 
@@ -60,7 +60,7 @@ export const Header = () => {
                                     fontFamily: "carton"
                                 }}
                             >
-                                Capitulos
+                                <h5 className="tipo-grafia">Capítulos</h5>
                             </a>
                         </li>
 
@@ -76,7 +76,7 @@ export const Header = () => {
                                     fontFamily: "carton"
                                 }}
                             >
-                                Personajes
+                                <h5 className="tipo-grafia">Personajes</h5>
                             </a>
                         </li>
 
@@ -92,7 +92,7 @@ export const Header = () => {
                                     fontFamily: "carton"
                                 }}
                             >
-                                Sobre nosotros
+                                <h5 className="tipo-grafia">Sobre nosotros</h5>
                             </a>
                         </li>
 
