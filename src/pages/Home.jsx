@@ -10,8 +10,8 @@ export const Home = () => {
 
             <Header />
 
-            {/* INICIO */}
-            <div id="inicio" className="bg-top">
+         
+            <div id="inicio">
 
                 <div className="container mt-5">
 
@@ -69,8 +69,8 @@ export const Home = () => {
             </div>
 
 
-            {/* CAPITULOS */}
-            <section id="capitulos" className="bg-cafi">
+          
+            <section id="capitulos">
 
                 <div className="container">
 
@@ -98,7 +98,7 @@ export const Home = () => {
                             <div className="carousel-item">
 
                                 <img
-                                    src="./capitulo2.jpg"
+                                    src="./capitulo.png"
                                     className="d-block w-100"
                                     alt=""
                                 />
@@ -109,7 +109,7 @@ export const Home = () => {
                             <div className="carousel-item">
 
                                 <img
-                                    src="./capitulo3.jpg"
+                                    src="./capitulo1.jpg"
                                     className="d-block w-100"
                                     alt=""
                                 />
@@ -147,12 +147,12 @@ export const Home = () => {
             </section>
 
 
-            {/* PERSONAJES */}
+           
             <section id="personajes" className="bg-cafe">
 
                 <div className="container">
 
-                    <h1 className="text-center">
+                    <h1 className="text-center mt-5">
                         Personajes
                     </h1>
 
@@ -173,12 +173,12 @@ export const Home = () => {
 
                                             <img src="./srrata.jpg" className="card-img-top" alt="" />
 
-                                            <div className="card-body">
+                                            <div className="card-body mt-3">
 
                                                 <h5 className="card-title">
                                                     Sra Rata
                                                 </h5>
-
+                                                <p className="mt-3">Malebola y sombria rata que cumple su rol secundario en la historia</p>
                                             </div>
 
                                         </div>
@@ -194,9 +194,10 @@ export const Home = () => {
 
                                             <div className="card-body">
 
-                                                <h5 className="card-title">
+                                                <h5 className="card-title mt-3">
                                                     Sr Topo
                                                 </h5>
+                                                <p className="mt-3">Un topo curioso y amigable que vive en el bosque</p>
 
                                             </div>
 
@@ -213,9 +214,10 @@ export const Home = () => {
 
                                             <div className="card-body">
 
-                                                <h5 className="card-title">
+                                                <h5 className="card-title mt-3">
                                                     Sra Fox
                                                 </h5>
+                                                <p className="mt-3">Una zorra astuta y traviessa y madre de los zorros</p>
 
                                             </div>
 
@@ -259,7 +261,7 @@ export const Home = () => {
             </section>
 
 
-            {/* SOBRE NOSOTROS */}
+            
             <section id="sobre-nosotros" className="mt-5">
 
                 <div className="container">
@@ -282,6 +284,7 @@ export const Home = () => {
                                     <h5 className="card-title">
                                         Matheo Yepez
                                     </h5>
+                                    <p className="mt-3">Desarrollador, Diseñador, Animador <br /> Manos del proyecto</p>
 
                                 </div>
 
@@ -301,6 +304,8 @@ export const Home = () => {
                                     <h5 className="card-title">
                                         Sneyder Gaviria
                                     </h5>
+                                    <p className="mt-3">Ilustrador,Publicidad, Animador <br />Cuello del proyecto</p>
+                                    
 
                                 </div>
 
@@ -320,6 +325,7 @@ export const Home = () => {
                                     <h5 className="card-title">
                                         Luis Miguel
                                     </h5>
+                                    <p className="mt-3">Contenido Digital,Animador,Ilustrador <br />Cabeza del proyecto</p>
 
                                 </div>
 
@@ -334,10 +340,13 @@ export const Home = () => {
             </section>
 
 
-            {/* FOOTER */}
+            
             <section id="footer" className="mb-5 mt-5">
 
                 <div className="container">
+                    <div>
+                        <h1 className='text-center mt-5'>Footer</h1>
+                    </div>
 
                     <div className="footer-inlec container-fluid rounded-5 border border-5">
 
