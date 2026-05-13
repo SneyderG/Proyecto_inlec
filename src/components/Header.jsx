@@ -13,7 +13,7 @@ export const Header = () => {
 
                 {/* Logo */}
                 <a href="#inicio">
-                    <img height="50" src="./loi.png" alt="logo" />
+                    <img height="80" src="./logito.png" alt="log" />
                 </a>
 
 
@@ -60,7 +60,7 @@ export const Header = () => {
                                     fontFamily: "carton"
                                 }}
                             >
-                                <h5 className="tipo-grafia">Capítulos</h5>
+                                <h5 className="tipo-grafia">Sobre nostros</h5>
                             </a>
                         </li>
 
@@ -76,7 +76,7 @@ export const Header = () => {
                                     fontFamily: "carton"
                                 }}
                             >
-                                <h5 className="tipo-grafia">Personajes</h5>
+                                <h5 className="tipo-grafia">Capitulos</h5>
                             </a>
                         </li>
 
@@ -92,7 +92,7 @@ export const Header = () => {
                                     fontFamily: "carton"
                                 }}
                             >
-                                <h5 className="tipo-grafia">Sobre nosotros</h5>
+                                <h5 className="tipo-grafia">contactos</h5>
                             </a>
                         </li>
 
