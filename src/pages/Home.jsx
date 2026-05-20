@@ -173,7 +173,7 @@ export const Home = () => {
                 </div>
 
                 <div className="cp-hero-scroll" aria-hidden="true">
-                    <span className="cp-scroll-text">scroll</span>
+                    <span className="cp-scroll-text"></span>
                     <div className="cp-scroll-line"></div>
                 </div>
                 <div className="cp-counter-strip"></div>
@@ -343,12 +343,12 @@ export const Home = () => {
 
                     {[
                         {
-                            img: './img1.jpeg', name: 'ANDRÉS\nSÁNCHEZ', role: 'Manos del proyecto',
+                            img: './img1.jpeg', name: 'ANDRÉS\nSÁNCHEZ', role: 'LIDER',
                             bio: 'Desarrollador, diseñador y animador. El que da vida visual al proyecto — desde la identidad hasta cada píxel de la experiencia digital.',
                             tags: ['Dev', 'Diseño', 'Animación'], num: '01'
                         },
                         {
-                            img: './img2.jpeg', name: 'SNEYDER\nGAVIRIA', role: 'Cuello del proyecto',
+                            img: './img2.jpeg', name: 'SARA\nCASTRILLON', role: 'INTEGRANTE',
                             bio: 'Ilustrador, publicista y animador. La voz creativa que conecta el contenido con la audiencia — estrategia, imagen y presencia.',
                             tags: ['Ilustración', 'Publicidad', 'Animación'], num: '02'
                         },
