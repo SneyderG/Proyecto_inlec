@@ -60,7 +60,7 @@ export const Header = () => {
                                     fontFamily: "carton"
                                 }}
                             >
-                                <h5 className="tipo-grafia">Sobre nostros</h5>
+                                <h5 className="tipo-grafia">Capitulos</h5>
                             </a>
                         </li>
 
@@ -69,14 +69,14 @@ export const Header = () => {
                         <li className="nav-item">
                             <a
                                 className="nav-link"
-                                href="#personajes"
+                                href="#contacto"
                                 onClick={() => setIsOpen(false)}
                                 style={{
                                     color: "#000",
                                     fontFamily: "carton"
                                 }}
                             >
-                                <h5 className="tipo-grafia">Capitulos</h5>
+                                <h5 className="tipo-grafia">Contacto</h5>
                             </a>
                         </li>
 
@@ -92,7 +92,7 @@ export const Header = () => {
                                     fontFamily: "carton"
                                 }}
                             >
-                                <h5 className="tipo-grafia">contactos</h5>
+                                <h5 className="tipo-grafia">sobre nosotros</h5>
                             </a>
                         </li>
 

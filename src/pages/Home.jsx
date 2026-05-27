@@ -298,17 +298,17 @@ export const Home = () => {
 
                     {[
                         {
-                            src: './perso1.jpeg', num: '001', tag: 'Entretenimiento',
+                            src: './perso3.jpeg', num: '001', tag: 'Entretenimiento',
                             title: 'Comedia',
                             text: 'Tratamos todos los temas con humor para que cada capítulo sea una experiencia fresca y entretenida, sin perder la profundidad del análisis.'
                         },
                         {
-                            src: './perso2.jpeg', num: '002', tag: 'Actualidad',
+                            src: './perso1.jpeg', num: '002', tag: 'Actualidad',
                             title: 'Redes sociales',
                             text: 'Hablamos sobre temas cotidianos, la farándula y todo lo que está dando de qué hablar en internet — sin filtros, con criterio.'
                         },
                         {
-                            src: './perso3.jpeg', num: '003', tag: 'Cine & TV',
+                            src: './perso2.jpeg', num: '003', tag: 'Cine & TV',
                             title: 'Películas y series',
                             text: 'Análisis, opiniones y debate sobre lo más relevante del cine, las series y las telenovelas — con dos perspectivas que no siempre coinciden.'
                         },
@@ -380,7 +380,8 @@ export const Home = () => {
 
                 </div>
             </section>
-
+            
+            <section id="contacto" className="cp-section cp-section-dark">
             
             <footer className="cp-footer">
                 <div className="cp-footer-inner">
@@ -396,7 +397,7 @@ export const Home = () => {
                         <ul className="cp-footer-links">
                             <li><a href="#inicio">Inicio</a></li>
                             <li><a href="#capitulos">Capítulos</a></li>
-                            <li><a href="#temas">Temas</a></li>
+                            <li><a href="#contacto">Contacto</a></li>
                             <li><a href="#sobre-nosotros">Sobre nosotros</a></li>
                         </ul>
                     </div>
@@ -406,9 +407,9 @@ export const Home = () => {
                             {[
                                 { href: 'https://www.facebook.com/share/1FwgCoeFAc/', label: 'Facebook', text: 'fb' },
                                 { href: 'https://www.instagram.com/contraplano.podcast?igsh=MWhwMGVoNnkyOXQ4eA==', label: 'Instagram', text: 'ig' },
-                                { href: 'https://www.youtube.com/', label: 'YouTube', text: 'yt' },
+                                { href: 'https://youtube.com/@contraplanopodcast-f5p?si=0XHarIDRianUrkKW', label: 'YouTube', text: 'yt' },
                                 { href: 'https://www.tiktok.com/@contraplano.podcas', label: 'TikTok', text: 'tk' },
-                                { href: 'https://x.com/', label: 'X / Twitter', text: 'x' },
+                                { href: 'https://whatsapp.com/channel/0029Vb7RqRB9mrGZ3QT9pj07', label: 'X / Twitter', text: 'Ws' },
                             ].map(s => (
                                 <a
                                     key={s.label}
@@ -427,7 +428,7 @@ export const Home = () => {
                         <ul className="cp-footer-links">
                             <li><a href="https://www.instagram.com/contraplano.podcast?igsh=MWhwMGVoNnkyOXQ4eA==" target="_blank" rel="noopener noreferrer">Instagram →</a></li>
                             <li><a href="https://www.tiktok.com/@contraplano.podcas" target="_blank" rel="noopener noreferrer">TikTok →</a></li>
-                            <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">YouTube →</a></li>
+                            <li><a href="https://youtube.com/@contraplanopodcast-f5p?si=0XHarIDRianUrkKW" target="_blank" rel="noopener noreferrer">YouTube →</a></li>
                         </ul>
                     </div>
                 </div>
@@ -436,6 +437,7 @@ export const Home = () => {
                     <span className="cp-footer-tagmark">MEDELLÍN · CO</span>
                 </div>
             </footer>
+            </section>
         </>
     )
 }
