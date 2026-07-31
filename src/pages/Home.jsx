@@ -4,7 +4,7 @@ import "../stylesheets/Home.css"
 
 export const Home = () => {
 
-    const [mostrarModal, setMostrarModal] = useState(false)
+    const [mostrarModal, setMostrarModal] = useState(false) // modal con los 4 bloques completos
     const cursorRef = useRef(null)
     const cursorRingRef = useRef(null)
 
@@ -25,7 +25,7 @@ export const Home = () => {
         return () => document.removeEventListener('mousemove', moveCursor)
     }, [])
 
-   
+
     useEffect(() => {
         const reveals = document.querySelectorAll('.reveal')
         const observer = new IntersectionObserver(
@@ -38,7 +38,7 @@ export const Home = () => {
         return () => observer.disconnect()
     }, [])
 
-   
+
     const onHoverEnter = () => {
         if (cursorRef.current) {
             cursorRef.current.style.width = '20px'
@@ -66,13 +66,41 @@ export const Home = () => {
 
     const filmStrips = Array.from({ length: 20 })
 
+    // Los 4 bloques completos que se muestran dentro del único modal
+    const buscamosData = [
+        {
+            key: 'concepto',
+            num: '01',
+            title: 'Objetivos',
+            completo: 'Desarrollar contenido digital tipo podcast juvenil, ofreciendo contenido informativo, reflexivo y de entretenimiento, promoviendo la participación activa del público y fortaleciendo las habilidades comunicativas.'
+        },
+        {
+            key: 'nombre',
+            num: '02',
+            title: 'El nombre',
+            completo: 'El término viene del lenguaje cinematográfico: el encuadre opuesto al plano principal en una conversación. Primero ves al que habla, luego la reacción del otro. Así somos nosotros.'
+        },
+        {
+            key: 'Mision',
+            num: '03',
+            title: 'Misión',
+            completo: 'Nuestra misión es aplicar nuestra media técnica en contenidos digitales en un formato de podcast, desarrollando, promoviendo la expresión, el pensamiento crítico y la participación activa  del público, que los oyentes se informe mediante nuestro contenido, se entretengan y generen una reflexión positiva de nuestros capítulos.'
+        },
+        {
+            key: 'vision',
+            num: '✦',
+            title: 'Nuestra visión',
+            completo: 'Nuestra visión es posicionar el podcast de Contraplano como un proyecto innovador y referente en la comunicación digital, reconocido por su capacidad para impactar positivamente la vida de los oyentes — capítulo a capítulo, perspectiva a perspectiva.'
+        },
+    ]
+
     return (
         <>
-            
+
             <div className="cp-cursor" ref={cursorRef}></div>
             <div className="cp-cursor-ring" ref={cursorRingRef}></div>
 
-         
+
             <nav className="cp-nav">
                 <a href="#inicio" className="cp-logo-nav">
                     CONTRA<span className="cp-logo-dim">PLANO</span>
@@ -85,14 +113,15 @@ export const Home = () => {
                 </ul>
             </nav>
 
-           
+
+            {/* Modal único con los 4 bloques completos */}
             {mostrarModal && (
                 <div
                     className="cp-modal-overlay"
                     onClick={() => setMostrarModal(false)}
                     role="dialog"
                     aria-modal="true"
-                    aria-label="Nuestra visión"
+                    aria-label="Qué buscamos"
                 >
                     <div onClick={(e) => e.stopPropagation()} style={{ position: 'relative' }}>
                         <div className="cp-modal-box">
@@ -106,13 +135,20 @@ export const Home = () => {
                                 onMouseLeave={onHoverLeave}
                             >✕</button>
                             <div className="cp-modal-icon">🎬</div>
-                            <div className="cp-modal-title">Nuestra visión</div>
-                            <p className="cp-modal-text">
-                                Nuestra visión es posicionar el podcast de Contraplano como un proyecto
-                                innovador y referente en la comunicación digital, reconocido por su
-                                capacidad para impactar positivamente la vida de los oyentes —
-                                capítulo a capítulo, perspectiva a perspectiva.
-                            </p>
+                            <div className="cp-modal-title">Qué buscamos</div>
+
+                            <div style={{ textAlign: 'left', maxHeight: '55vh', overflowY: 'auto' }}>
+                                {buscamosData.map((b, i) => (
+                                    <div key={b.key} style={{ marginBottom: i === buscamosData.length - 1 ? 0 : '1.25rem' }}>
+                                        <div className="cp-card-num">{b.num}</div>
+                                        <div className="cp-card-title">{b.title}</div>
+                                        <p className="cp-modal-text">
+                                            {b.completo}
+                                        </p>
+                                    </div>
+                                ))}
+                            </div>
+
                             <button
                                 className="cp-btn-modal-close"
                                 onClick={() => setMostrarModal(false)}
@@ -126,15 +162,15 @@ export const Home = () => {
                 </div>
             )}
 
-            
+
             <section id="inicio" className="cp-hero">
                 <div className="cp-hero-bg"></div>
 
-                
+
                 <div className="cp-film-strips" aria-hidden="true">
                     {filmStrips.map((_, i) => <div key={i} className="cp-film-strip-item"></div>)}
                 </div>
-             
+
                 <div className="cp-film-strips cp-film-strips-right" aria-hidden="true">
                     {filmStrips.map((_, i) => <div key={i} className="cp-film-strip-item"></div>)}
                 </div>
@@ -179,7 +215,7 @@ export const Home = () => {
                 <div className="cp-counter-strip"></div>
             </section>
 
-           
+
             <section id="inicio" className="cp-section cp-section-dark">
                 <div className="cp-section-num" aria-hidden="true">01</div>
                 <p className="cp-section-label reveal">— Sobre el proyecto</p>
@@ -187,88 +223,31 @@ export const Home = () => {
                     QUÉ <span className="cp-oro">BUSCAMOS</span>
                 </h2>
 
-                <div className="cp-buscamos-grid reveal reveal-delay-2">
-
-                    <div
-                        className="cp-buscamos-card"
+                <div className="cp-buscamos-grid reveal reveal-delay-2" style={{ textAlign: 'center' }}>
+                    <p className="cp-card-text" style={{ maxWidth: '640px', margin: '0 auto 2rem' }}>
+                        Contraplano nace del lenguaje cinematográfico: dos voces que, desde puntos
+                        de vista opuestos, analizan cine, series y la vida cotidiana. Así completamos
+                        el análisis, igual que un contraplano completa una escena — con la meta de
+                        ser un proyecto de referencia en la comunicación digital.
+                    </p>
+                    <button
+                        className="cp-btn-vision"
+                        onClick={() => setMostrarModal(true)}
                         onMouseEnter={onHoverEnter}
                         onMouseLeave={onHoverLeave}
                     >
-                        <div className="cp-card-num">01</div>
-                        <div className="cp-card-title">El concepto</div>
-                        <p className="cp-card-text">
-                            Contraplano es un podcast donde se hablan y analizan distintos temas —
-                            desde películas y series hasta situaciones de la vida cotidiana —
-                            siempre desde dos puntos de vista opuestos y complementarios.
-                        </p>
-                        <div className="cp-card-accent"></div>
-                    </div>
-
-                    <div
-                        className="cp-buscamos-card"
-                        onMouseEnter={onHoverEnter}
-                        onMouseLeave={onHoverLeave}
-                    >
-                        <div className="cp-card-num">02</div>
-                        <div className="cp-card-title">El nombre</div>
-                        <p className="cp-card-text">
-                            El término viene del lenguaje cinematográfico: el encuadre opuesto al
-                            plano principal en una conversación. Primero ves al que habla, luego
-                            la reacción del otro. Así somos nosotros.
-                        </p>
-                        <div className="cp-card-accent"></div>
-                    </div>
-
-                    <div
-                        className="cp-buscamos-card"
-                        onMouseEnter={onHoverEnter}
-                        onMouseLeave={onHoverLeave}
-                    >
-                        <div className="cp-card-num">03</div>
-                        <div className="cp-card-title">Por qué lo elegimos</div>
-                        <p className="cp-card-text">
-                            Porque en el cine el contraplano completa la escena. Nosotros somos
-                            dos voces que completan el análisis — perspectivas distintas que
-                            juntas ofrecen una visión más rica y reflexiva de cada tema.
-                        </p>
-                        <div className="cp-card-accent"></div>
-                    </div>
-
-                    <div
-                        className="cp-buscamos-card cp-card-vision"
-                        onMouseEnter={onHoverEnter}
-                        onMouseLeave={onHoverLeave}
-                    >
-                        <div>
-                            <div className="cp-card-num">✦</div>
-                            <div className="cp-card-title">Nuestra visión</div>
-                            <p className="cp-card-text">
-                                Posicionarnos como un proyecto innovador y referente en la
-                                comunicación digital, reconocido por el impacto positivo que
-                                generamos en la vida de nuestros oyentes.
-                            </p>
-                        </div>
-                        <button
-                            className="cp-btn-vision"
-                            onClick={() => setMostrarModal(true)}
-                            onMouseEnter={onHoverEnter}
-                            onMouseLeave={onHoverLeave}
-                        >
-                            <span>
-                                Leer más
-                                <svg className="cp-arrow" width="14" height="14" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" strokeWidth="2">
-                                    <path d="M5 12h14M12 5l7 7-7 7" />
-                                </svg>
-                            </span>
-                        </button>
-                        <div className="cp-card-accent"></div>
-                    </div>
-
+                        <span>
+                            Leer más
+                            <svg className="cp-arrow" width="14" height="14" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" strokeWidth="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </span>
+                    </button>
                 </div>
             </section>
 
-           
+
             <section id="capitulos" className="cp-section cp-section-grey">
                 <div className="cp-cap-bg-text" aria-hidden="true">CAP</div>
                 <div className="cp-cap-wrapper">
@@ -290,7 +269,7 @@ export const Home = () => {
                 </div>
             </section>
 
-            
+
             <section id="temas" className="cp-section cp-section-dark">
                 <p className="cp-section-label reveal">— De qué hablamos</p>
                 <h2 className="cp-section-title reveal reveal-delay-1">TEMAS</h2>
@@ -335,7 +314,7 @@ export const Home = () => {
                 </div>
             </section>
 
-           
+
             <section id="sobre-nosotros" className="cp-section cp-section-grey">
                 <p className="cp-section-label reveal">— Detrás del micrófono</p>
                 <h2 className="cp-section-title reveal reveal-delay-1">NOSOTROS</h2>
@@ -343,12 +322,12 @@ export const Home = () => {
 
                     {[
                         {
-                            img: './img1.jpeg', name: 'ANDRÉS\nSÁNCHEZ', role: 'LIDER',
+                            img: './andres.jpeg', name: 'ANDRÉS\nSÁNCHEZ', role: 'LIDER',
                             bio: 'Desarrollador, diseñador y animador. El que da vida visual al proyecto — desde la identidad hasta cada píxel de la experiencia digital.',
                             tags: ['Dev', 'Diseño', 'Animación'], num: '01'
                         },
                         {
-                            img: './img2.jpeg', name: 'SARA\nCASTRILLON', role: 'INTEGRANTE',
+                            img: './sara.jpg', name: 'SARA\nCASTRILLON', role: 'INTEGRANTE',
                             bio: 'Ilustrador, publicista y animador. La voz creativa que conecta el contenido con la audiencia — estrategia, imagen y presencia.',
                             tags: ['Ilustración', 'Publicidad', 'Animación'], num: '02'
                         },
@@ -380,9 +359,9 @@ export const Home = () => {
 
                 </div>
             </section>
-            
+
             <section id="contacto" className="cp-section cp-section-dark">
-            
+
             <footer className="cp-footer">
                 <div className="cp-footer-inner">
                     <div>
@@ -425,11 +404,7 @@ export const Home = () => {
                                 </a>
                             ))}
                         </div>
-                        <ul className="cp-footer-links">
-                            <li><a href="https://www.instagram.com/contraplano.podcast?igsh=MWhwMGVoNnkyOXQ4eA==" target="_blank" rel="noopener noreferrer">Instagram →</a></li>
-                            <li><a href="https://www.tiktok.com/@contraplano.podcas" target="_blank" rel="noopener noreferrer">TikTok →</a></li>
-                            <li><a href="https://youtube.com/@contraplanopodcast-f5p?si=0XHarIDRianUrkKW" target="_blank" rel="noopener noreferrer">YouTube →</a></li>
-                        </ul>
+
                     </div>
                 </div>
                 <div className="cp-footer-bottom">
